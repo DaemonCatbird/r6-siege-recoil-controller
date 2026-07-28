@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0b0d"/>
+      <stop offset="55%" stop-color="#14161a"/>
+      <stop offset="100%" stop-color="#1c1f24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a1f"/>
+      <stop offset="100%" stop-color="#ffb347"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b1a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff6b1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9d42" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff9d42" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- tactical grid -->
+  <g stroke="#2a2d33" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="350" y1="0" x2="350" y2="360"/>
+    <line x1="550" y1="0" x2="550" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="950" y1="0" x2="950" y2="360"/>
+    <line x1="1150" y1="0" x2="1150" y2="360"/>
+  </g>
+
+  <circle cx="960" cy="180" r="220" fill="url(#glow)"/>
+
+  <!-- recoil pattern jagged line (raw) -->
+  <polyline points="760,300 780,240 795,270 815,190 830,225 850,150 865,190 885,120 900,160 920,95 935,130 955,70 970,110 990,55"
+    fill="none" stroke="#e5383b" stroke-width="2.5" opacity="0.55"/>
+
+  <!-- corrected straight line (macro'd) -->
+  <line x1="760" y1="300" x2="990" y2="55" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- dots along corrected path -->
+  <circle cx="760" cy="300" r="4" fill="#ffb347"/>
+  <circle cx="875" cy="177" r="4" fill="#ffb347"/>
+  <circle cx="990" cy="55" r="5" fill="#ff5a1f"/>
+
+  <!-- crosshair reticle -->
+  <g stroke="#ff9d42" stroke-width="2" opacity="0.85">
+    <circle cx="1030" cy="150" r="70" fill="none"/>
+    <circle cx="1030" cy="150" r="42" fill="none" opacity="0.5"/>
+    <line x1="1030" y1="60" x2="1030" y2="100"/>
+    <line x1="1030" y1="200" x2="1030" y2="240"/>
+    <line x1="940" y1="150" x2="980" y2="150"/>
+    <line x1="1080" y1="150" x2="1120" y2="150"/>
+  </g>
+  <circle cx="1030" cy="150" r="3" fill="#ff5a1f"/>
+
+  <!-- diagonal accent stripes -->
+  <polygon points="0,360 90,360 40,300 0,300" fill="#ff5a1f" opacity="0.25"/>
+  <polygon points="0,360 130,360 70,290 0,290" fill="#ff9d42" opacity="0.15"/>
+
+  <!-- side rule ticks left -->
+  <g stroke="#3a3d44" stroke-width="1">
+    <line x1="60" y1="40" x2="60" y2="320"/>
+    <line x1="60" y1="80" x2="75" y2="80"/>
+    <line x1="60" y1="150" x2="75" y2="150"/>
+    <line x1="60" y1="220" x2="75" y2="220"/>
+    <line x1="60" y1="290" x2="75" y2="290"/>
+  </g>
+
+  <!-- headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="66" font-weight="800" fill="#f5f6f8" textLength="980" lengthAdjust="spacingAndGlyphs">R6 Siege No Recoil Macro</text>
+
+  <rect x="62" y="172" width="220" height="4" fill="url(#accent)"/>
+
+  <!-- tagline -->
+  <text x="60" y="220" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#c7cad0" textLength="820" lengthAdjust="spacingAndGlyphs">Neutralize weapon recoil patterns in R6 Siege</text>
+  <text x="60" y="254" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#c7cad0" textLength="650" lengthAdjust="spacingAndGlyphs">with customizable per-gun macro profiles</text>
+
+  <!-- small tactical labels -->
+  <text x="762" y="318" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#6a6e76" letter-spacing="2">RAW PATTERN</text>
+  <text x="985" y="45" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#ff9d42" letter-spacing="2">TAMED</text>
+</svg>
